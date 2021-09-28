@@ -1,149 +1,38 @@
 {
-  "name": "@helium10/re-ui-components",
-  "version": "1.0.11",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
-  "types": "dist/index.d.ts",
-  "source": "src/index.ts",
-  "private": false,
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com:helium10/re-ui-components.git"
-  },
-  "files": [
-    "dist/",
-    "index.ts"
-  ],
-  "sideEffects": false,
-  "scripts": {
-    "analyze": "source-map-explorer 'dist/index.es.js'",
-    "check:ts": "tsc --noEmit",
-    "check:lint": "eslint src/**/*.{ts,tsx,js}",
-    "clean": "rimraf dist",
-    "fix:lint": "eslint src/**/*.{ts,tsx,js} --fix",
-    "fix:prettier": "prettier --write src/**/*.{json}",
-    "start:storybook": "start-storybook -p 9009 -s public",
-    "build:storybook": "build-storybook -s public",
-    "prod:rollup": "rollup --config",
-    "start:rollup": "rollup --config --configDebug -w",
-    "analyze:rollup": "rollup --config --analyze",
-    "zeplin:connect": "zeplin connect",
-    "build:icons": "npx @svgr/cli -d src/components/icon/components/ src/components/icon/svg/ --config-file src/components/icon/.svgrconfig --template src/components/icon/template.js --prettier-config .prettierrc --index-template src/components/icon/index-template.js",
-    "build:fa": "npx @svgr/cli -d src/components/icon/components/fontAwesome src/components/icon/svg/fontAwesome --config-file src/components/icon/.svgrconfig --template src/components/icon/template.js --prettier-config .prettierrc --index-template src/components/icon/index-template.js",
-    "build:logos": "npx @svgr/cli -d src/components/icon/components/logos src/components/icon/svg/logos --config-file src/components/icon/.svgrconfig --template src/components/icon/template.js --prettier-config .prettierrc --index-template src/components/icon/index-template.js"
-  },
-  "peerDependencies": {
-    "@helium10/re-core": ">=0",
-    "react": ">=17",
-    "react-dom": ">=17",
-    "react-router-dom": ">=5",
-    "react-transition-group": ">=4",
-    "styled-components": ">=5"
-  },
+  "name": "chromatic-test",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-regular-svg-icons": "^5.15.4",
-    "@fortawesome/pro-regular-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.15",
-    "@helium10/re-core": "0.1.33",
-    "@reatom/core": "^1.1.5",
-    "@reatom/react": "^1.1.5",
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^11.0.1",
-    "@rollup/plugin-replace": "^2.4.2",
-    "@rollup/plugin-strip": "^2.0.0",
-    "@svgr/rollup": "^5.5.0",
-    "@tippyjs/react": "^4.2.0",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.53",
-    "@types/react-dom": "^16.9.8",
-    "@types/react-paginate": "^7.1.0",
-    "@types/react-resizable": "^1.7.2",
-    "@types/react-transition-group": "^4.4.0",
-    "@types/redux-logger": "^3.0.8",
-    "@types/styled-components": "^5.1.4",
-    "compute-scroll-into-view": "^1.0.17",
-    "date-fns": "^2.23.0",
-    "localized-strings": "^0.2.4",
-    "re-resizable": "^6.9.0",
-    "react-dnd": "^14.0.2",
-    "react-dnd-html5-backend": "^14.0.0",
-    "react-functional-select": "^2.9.5",
-    "react-hook-form": "^7.4.0",
-    "react-minimal-pie-chart": "^8.2.0",
-    "react-paginate": "^7.1.2",
-    "react-text-mask": "^5.4.3",
-    "react-toastify": "^7.0.4",
-    "react-window": "^1.8.6",
-    "redux-logger": "^3.0.6",
-    "rollup": "^2.33.2",
-    "rollup-plugin-analyzer": "^3.3.0",
-    "rollup-plugin-delete": "^2.0.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-smart-asset": "^2.1.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.29.0",
-    "rollup-plugin-visualizer": "^5.3.0",
-    "text-mask-addons": "^3.8.0",
-    "tslib": "^2.2.0",
-    "typescript": "^4.1.3",
-    "use-debounce": "^5.2.0",
-    "use-onclickoutside": "^0.3.1",
-    "xlsx-lite": "^0.0.15"
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
   },
-  "devDependencies": {
-    "@storybook/addon-actions": "^6.3.7",
-    "@storybook/addon-docs": "^6.3.7",
-    "@storybook/addon-essentials": "^6.3.7",
-    "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.3.7",
-    "@storybook/addon-viewport": "^6.3.7",
-    "@storybook/addons": "^6.3.7",
-    "@storybook/preset-create-react-app": "^3.2.0",
-    "@storybook/react": "^6.3.7",
-    "@types/react-text-mask": "^5.4.9",
-    "eslint-config-prettier": "^7.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.5.1",
-    "prettier": "^2.1.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-refresh": "^0.10.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.1",
-    "react-transition-group": "^4.4.1",
-    "source-map-explorer": "^2.5.2",
-    "storybook-addon-designs": "^6.1.0",
-    "styled-components": "^5.2.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "tsc --noEmit"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{json,css,md}": [
-      "prettier --write",
-      "git add"
-    ]
+  "scripts": {
+    "start": "chromatic-test/node_modules/.bin/react-scripts start",
+    "build": "chromatic-test/node_modules/.bin/react-scripts build",
+    "test": "chromatic-test/node_modules/.bin/react-scripts test",
+    "eject": "chromatic-test/node_modules/.bin/react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -157,5 +46,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/node-logger": "^6.3.8",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.8",
+    "chromatic": "^5.10.1"
   }
 }
