@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
-import styled from "styled-components";
 
 /**
  * Primary UI component for user interaction
@@ -9,28 +8,14 @@ import styled from "styled-components";
 export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <>
-      <button
-        type="button"
-        className={["storybook-button", `storybook-button--${size}`, mode].join(
-          " "
-        )}
-        style={backgroundColor && { backgroundColor }}
-        {...props}
-      >
-        {label}
-      </button>
-      <StyledButton
-        type="button"
-        className={["storybook-button", `storybook-button--${size}`, mode].join(
-          " "
-        )}
-        style={backgroundColor && { backgroundColor }}
-        {...props}
-      >
-        Green Button
-      </StyledButton>
-    </>
+    <button
+      type="button"
+      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      style={backgroundColor && { backgroundColor }}
+      {...props}
+    >
+      {label} Hello
+    </button>
   );
 };
 
@@ -63,6 +48,3 @@ Button.defaultProps = {
   size: 'medium',
   onClick: undefined,
 };
-const StyledButton = styled.button`
-background-color: green;
-`
