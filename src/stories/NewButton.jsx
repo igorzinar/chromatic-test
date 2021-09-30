@@ -15,7 +15,7 @@ export const NewButton = ({
 }) => {
   return (
     <StyledNewButton type="button" {...props}>
-      {label} From different
+      {label} From different !!!
     </StyledNewButton>
   );
 };
