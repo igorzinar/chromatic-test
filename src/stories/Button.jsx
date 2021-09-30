@@ -28,7 +28,7 @@ export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
         style={backgroundColor && { backgroundColor }}
         {...props}
       >
-        Green Button
+       Blue Button
       </StyledButton>
     </>
   );
