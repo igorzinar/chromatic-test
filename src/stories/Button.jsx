@@ -64,5 +64,5 @@ Button.defaultProps = {
   onClick: undefined,
 };
 const StyledButton = styled.button`
-background-color: green;
+background-color: dodgerblue;
 `
