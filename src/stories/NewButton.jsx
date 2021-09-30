@@ -54,5 +54,5 @@ const StyledNewButton = styled.button`
   border-radius: 20px;
   border: solid 1px black;
   color: white;
-  background-color: #1ea7fd;
+  background-color: dodgerblue;
 `;
